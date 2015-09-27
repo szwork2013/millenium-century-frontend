@@ -1,0 +1,47 @@
+<div>
+  <h3>Accesso</h3>
+  <alert ng-if="errorMessage" type="danger">{{errorMessage}}</alert>
+  <form name="loginForm" class="form-horizontal" role="form" ng-submit="login()">
+    <div class="form-group" ng-class="{ 'has-error': loginForm.username.$invalid && !loginForm.username.$pristine }">
+      <label for="username" class="col-sm-2 control-label">Utente</label>
+
+      <div class="col-sm-4">
+        <input type="text"
+               class="form-control"
+               id="username"
+               name="username"
+               placeholder="Utente"
+               ng-required="true"
+               ng-maxlength="50"
+               ng-model="itemSource.username">
+
+        <div ng-messages="loginForm.username.$error" ng-messages-multiple class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error': loginForm.password.$invalid && !loginForm.password.$pristine}">
+      <label for="password" class="col-sm-2 control-label">Password</label>
+
+      <div class="col-sm-4">
+        <input type="password"
+               class="form-control"
+               id="password"
+               name="password"
+               placeholder="password"
+               ng-required="true"
+               ng-maxlength="100"
+               ng-model="itemSource.password">
+
+        <div ng-messages="loginForm.password.$error" ng-messages-multiple class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success" ng-disabled="loginForm.$invalid">Accedi</button>
+      </div>
+    </div>
+  </form>
+</div>

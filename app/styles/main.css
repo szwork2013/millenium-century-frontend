@@ -1,0 +1,213 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 40px;
+}
+
+/* Custom page footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #f5f5f5;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 15px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.navbar {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+.pagination {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+}
+
+#loading-bar-spinner .spinner-icon {
+  border-top-color: whitesmoke;
+  border-left-color: whitesmoke;
+}
+
+#loading-bar .bar {
+  background: whitesmoke;
+  height: 4px;
+}
+
+.sortable {
+  cursor: pointer;
+  border-bottom: 2px solid #e396ab !important;
+}
+
+.sorted_asc, .sorted_desc {
+  border-bottom: 2px solid #5f192c !important;
+}
+
+.input-group-addon {
+  border-right: 1px dotted #E6E6E6;
+  border-top: 1px dotted #E6E6E6;
+  border-bottom: none;
+  top: 0;
+  box-shadow: inset 0 -1px 0 #dddddd;
+  cursor: pointer;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.input-group .form-control:focus ~ .input-group-addon {
+  box-shadow: inset 0 -2px 0 #5f192c;
+}
+
+.form-group .has-error .input-group-addon {
+  border-color: white;
+  background-color: white;
+  box-shadow: inset 0 -2px 0 #b60b0f;
+}
+
+.form-group .has-error .input-group .form-control:focus ~ .input-group-addon {
+  border-color: white;
+  background-color: white;
+  box-shadow: inset 0 -2px 0 #b60b0f;
+}
+
+.placeholder {
+  color: #dddddd;
+}
+
+div h2 {
+  margin-top: 0px;
+}
+
+::selection {
+  background-color: #5f192c;
+  color: whitesmoke;
+}
+
+::-moz-selection {
+  background-color: #5f192c;
+  color: whitesmoke;
+}
+
+
+/* FullCalendar */
+.fc-content{
+  white-space: normal !important;
+}
+
+.fc-content > a {
+  color: white;
+}
+
+.fc-event {
+  /*line-height: inherit;*/
+}
+
+.fc-event.sent {
+  border: 1px solid #6daf39;
+  background-color: #6daf39;
+}
+.fc-event.likely_confirmed {
+  border: 1px solid #3498db;
+  background-color: #3498db;
+}
+.fc-event.waiting_documents {
+  border: 1px solid #88FF80;
+  background-color: #88FF80;
+}
+.fc-event.documents_sent {
+  border: 1px solid #ff6e08;
+  background-color: #ff6e08;
+}
+.fc-event.documents_received {
+  border: 1px solid #b60b0f;
+  background-color: #b60b0f;
+}
+.fc-event.confirmed {
+  border: 1px solid RGB(122,0,44);
+  background-color: #ffffff;
+  color: RGB(122,0,44)!important;
+}
+.fc-event.totals {
+  font-size: 1.2em;
+  font-weight: bold;
+  border: 1px solid #471321;
+  background-color: #471321;
+}
+
+.fc-content .row {
+  margin-left: -5px;
+  margin-right: 20px;
+}
+
+.fc-event.confirmed > .fc-content > a{
+    color: RGB(122,0,44) !important;
+}

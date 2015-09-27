@@ -1,0 +1,100 @@
+<div class="modal-header">
+  <h3 class="modal-title">Nuovo evento</h3>
+</div>
+<div class="modal-body">
+  <form name="form" class="form-horizontal" role="form" ng-submit="save()" novalidate>
+    <div class="form-group">
+      <div class="col-sm-6" ng-class="{ 'has-error': form.date.$invalid && !form.date.$pristine }">
+        <label for="date" class="control-label">Data</label>
+
+        <p class="input-group" ng-if="!event.unique_id">
+          <input name="date" id="date" class="form-control" type="text" datepicker-popup=""
+                 ng-model="event.date"
+
+                 placeholder="Da Data" is-open="opened" ng-required="true"/>
+          <span class="input-group-addon glyphicon glyphicon-calendar" ng-click="open($event)"></span>
+        </p>
+        <p class="input-group" ng-if="event.unique_id">
+          <label for="">{{event.date | date:'dd/MM/yyyy'}}</label>
+        </p>
+
+        <div ng-messages="form.date.$error" ng-messages-multiple role="alert" class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+      <div class="col-sm-6" ng-class="{ 'has-error': form.pax.$invalid && !form.pax.$pristine }">
+        <label for="pax" class="control-label">Pax</label>
+        <input name="pax" id="pax" type="number" class="form-control" ng-model="event.pax" ng-min="0" min="0"
+               ng-required="true"
+               placeholder="Pax"/>
+
+        <div ng-messages="form.pax.$error" ng-messages-multiple role="alert" class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-6" ng-class="{ 'has-error': form.waiter_pax.$invalid && !form.waiter_pax.$pristine }">
+        <label for="pax" class="control-label">N° Stim. Camerieri</label>
+        <input name="waiter_pax" id="waiter_pax" type="number" class="form-control" ng-model="event.waiter_pax"
+               ng-min="0"
+               min="0"
+               ng-required="true"
+               placeholder="N° Camerieri"/>
+
+        <div ng-messages="form.waiter_pax.$error" ng-messages-multiple role="alert" class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+      <div class="col-sm-6" ng-class="{ 'has-error': form.chef_pax.$invalid && !form.chef_pax.$pristine }">
+        <label for="chef_pax" class="control-label">N° Stim. Chef</label>
+        <input name="chef_pax" id="chef_pax" type="number" class="form-control" ng-model="event.chef_pax" ng-min="0"
+               min="0"
+               ng-required="true"
+               placeholder="N° Chef"/>
+
+        <div ng-messages="form.chef_pax.$error" ng-messages-multiple role="alert" class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-12" ng-class="{ 'has-error': form.eventType.$invalid && !form.eventType.$pristine }">
+        <label for="eventType" class="control-label">Tipologia evento</label>
+        <select name="eventType" id="eventType" class="form-control" ng-model="event.eventType"
+                ng-required="true"
+                ng-options="item as item.description for item in eventTypes track by item.id">
+          <option value="" class="placeholder">-- Tipologia Evento --</option>
+        </select>
+
+        <div ng-messages="form.eventType.$error" ng-messages-multiple role="alert" class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-12" ng-class="{ 'has-error': form.location.$invalid && !form.location.$pristine }">
+        <label for="location" class="control-label">Location</label>
+
+        <p class="input-group">
+          <input name="location" id="location" class="form-control" type="text" ng-model="event.location"
+                 ng-required="true"
+                 placeholder="Location"
+                 typeahead-editable="false"
+                 typeahead-wait-ms="500"
+                 typeahead="item as item.name + ', ' + item.district.name + ', ' +item.province.name for item in getLocations($viewValue)">
+          <span class="input-group-addon glyphicon glyphicon-plus" ng-click="addLocation()"></span>
+        </p>
+
+        <div ng-messages="form.location.$error" ng-messages-multiple role="alert" class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-disabled="form.$invalid || saving" ng-click="ok()">Conferma</button>
+  <button class="btn btn-warning" ng-click="cancel()">Chiudi</button>
+</div>

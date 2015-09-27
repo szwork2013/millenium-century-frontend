@@ -1,0 +1,23 @@
+{
+  "development": {
+    "ENV": {
+      "apiEndpoint": "http://millenium.dev/api/v1/",
+      "clientId": "millenium",
+      "clientSecret": "millenium"
+    }
+  },
+  "staging": {
+    "ENV": {
+      "apiEndpoint": "http://staging.api.millenium.it/api/v1/",
+      "clientId": "DHboxSclGlCOaZVQdmfnV9PStdwjf6Lq",
+      "clientSecret": "DHboxSclGlCOaZVQdmfnV9PStdwjf6Lq"
+    }
+  },
+  "production": {
+    "ENV": {
+      "apiEndpoint": "http://gestionaleapi.milleniumricevimenti.com/api/v1/",
+      "clientId": "xxx",
+      "clientSecret": "yyy"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<div class="modal-header">
+  <h3 class="modal-title">Export</h3>
+</div>
+<div class="modal-body">
+  <form name="form" class="form-horizontal" novalidate>
+    <div class="form-group">
+      <div class="col-md-6" ng-class="{ 'has-error': form.mode.$invalid && !form.mode.$pristine }">
+        <label for="mode" class="control-label">Modalità</label>
+        <select name="mode" id="mode" class="form-control" ng-model="mode" ng-required="true"
+                ng-options="item.value as item.text for item in modes">
+          <option value="" class="placeholder">-- seleziona modalità --</option>
+        </select>
+
+        <div ng-messages="form.mode.$error" ng-messages-multiple role="alert" class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <label for="extension" class="control-label">Tipologia file</label>
+        <select name="extension" id="extension" class="form-control" ng-model="extension" ng-required="true"
+                ng-options="item.value as item.text for item in extensions">
+          <option value="" class="placeholder">-- seleziona tipologia --</option>
+        </select>
+
+        <div ng-messages="form.extension.$error" ng-messages-multiple role="alert" class="help-block">
+          <div ng-messages-include="error-messages"></div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn" ng-click="ok()" ng-disabled="form.$invalid || export.status == 10"
+          ng-class="{'btn-primary': export.status == 0, 'btn-info': export.status == 10, 'btn-success': export.status == 20, 'btn-danger': export.status == 30}">
+    <span class="glyphicon"
+          ng-class="{'glyphicon-th': export.status == 0, 'glyphicon-repeat fa-spin': export.status == 10, 'glyphicon-download-alt': export.status == 20, 'glyphicon-exclamation-sign': export.status == 30}"
+          aria-hidden="true"></span>
+    &nbsp;{{export.status==0 ? 'Export' : (export.status == 10 ? 'Downloading' : (export.status == 20 ? 'Click to
+    download' : 'Error'))}}
+  </button>
+  <button class="btn btn-warning" ng-click="cancel()">Chiudi</button>
+</div>

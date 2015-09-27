@@ -1,0 +1,12 @@
+<div class="modal-header">
+  <h3 class="modal-title">Nuovo cliente</h3>
+</div>
+<div class="modal-body">
+  <form name="form" class="form-horizontal" role="form" ng-submit="save()" novalidate>
+    <div ng-include="'../../views/customers/form.html'"></div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-disabled="form.$invalid || saving" ng-click="ok()">Conferma</button>
+  <button class="btn btn-warning" ng-click="cancel()">Chiudi</button>
+</div>

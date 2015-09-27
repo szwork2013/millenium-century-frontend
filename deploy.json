@@ -1,0 +1,16 @@
+{
+  "staging": {
+    "appPath": "/home/deploy/www/millenium/frontend/staging",
+    "host": "213.183.128.83",
+    "port": "22",
+    "username": "root",
+    "password": "5VLtY$f5#"
+  },
+  "production": {
+    "appPath": "/home/deploy/www/millenium/frontend/production",
+    "host": "213.183.128.83",
+    "port": "22",
+    "username": "root",
+    "password": "5VLtY$f5#"
+  }
+}
