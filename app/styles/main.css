@@ -157,57 +157,18 @@ div h2 {
   color: whitesmoke;
 }
 
-
-/* FullCalendar */
-.fc-content{
-  white-space: normal !important;
+.navbar-default {
+	background-color: transparent;
 }
 
-.fc-content > a {
-  color: white;
+.navbar {
+	box-shadow: none;
 }
 
-.fc-event {
-  /*line-height: inherit;*/
+.navbar-default .navbar-brand{
+	padding: 20px;
 }
 
-.fc-event.sent {
-  border: 1px solid #6daf39;
-  background-color: #6daf39;
-}
-.fc-event.likely_confirmed {
-  border: 1px solid #3498db;
-  background-color: #3498db;
-}
-.fc-event.waiting_documents {
-  border: 1px solid #88FF80;
-  background-color: #88FF80;
-}
-.fc-event.documents_sent {
-  border: 1px solid #ff6e08;
-  background-color: #ff6e08;
-}
-.fc-event.documents_received {
-  border: 1px solid #b60b0f;
-  background-color: #b60b0f;
-}
-.fc-event.confirmed {
-  border: 1px solid RGB(122,0,44);
-  background-color: #ffffff;
-  color: RGB(122,0,44)!important;
-}
-.fc-event.totals {
-  font-size: 1.2em;
-  font-weight: bold;
-  border: 1px solid #471321;
-  background-color: #471321;
-}
-
-.fc-content .row {
-  margin-left: -5px;
-  margin-right: 20px;
-}
-
-.fc-event.confirmed > .fc-content > a{
-    color: RGB(122,0,44) !important;
+.header, .navbar {
+	margin-bottom: 0px;
 }
