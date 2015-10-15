@@ -172,3 +172,7 @@ div h2 {
 .header, .navbar {
 	margin-bottom: 0px;
 }
+
+.navbar-default {
+	border-color: #fff !important;
+}
