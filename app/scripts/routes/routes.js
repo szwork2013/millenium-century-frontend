@@ -1,6 +1,6 @@
 'use strict';
 angular.module('millenium.routes', [
-
+	'millenium.about.routes'
 ]);
 
 angular.module('millenium.routes')
