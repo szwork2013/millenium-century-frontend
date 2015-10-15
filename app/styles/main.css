@@ -167,6 +167,7 @@ div h2 {
 
 .navbar-default .navbar-brand{
 	padding: 15px;
+	font-size: 32px;
 }
 
 .header, .navbar {
@@ -174,5 +175,9 @@ div h2 {
 }
 
 .navbar-default {
-	border-color: #fff !important;
+	border-color: transparent;
+}
+
+.nav > li > a {
+	padding: 15px 40px;
 }
