@@ -6,6 +6,15 @@ angular.module('millenium.about.routes', [])
 				url: '/about',
 				templateUrl: '../../views/about/index.html',
 				controller: 'aboutController',
+				resolve: {
+					content: function(resourceService){
+						return resourceService.forResource('about')
+							.get()
+								.then(function(result){
+									return result;
+								})
+					}
+				},
 				pageTitle: 'About'
 			});
 	});

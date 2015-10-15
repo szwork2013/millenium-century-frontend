@@ -1,5 +1,64 @@
+<style media="screen">
+	.shape {
+		position: absolute;
+		top: 0px;
+		left:0px;
+		height: 100%;
+		width: 25%;
+		overflow: hidden;
+		z-index: -1;
+	}
+
+	.shape:before, .shape:after {
+		position: absolute;
+		content: '';
+		width: 100%;
+		height: 100%;
+	}
+
+	.shape:before {
+		right: 33%;
+		background: linear-gradient(to right bottom, transparent 50%, #B6FFB7 50%);
+	}
+
+	.shape:after {
+		left: 0;
+		background: linear-gradient(to left top, transparent 50%, #252324 50%);
+	}
+	
+	.main-container {
+		margin-left: 33%;
+	}
+	
+	.navbar-default .navbar-brand {
+		color:white;
+	}
+	
+	.section {
+		margin-top: 20px;
+	}
+	.section p {
+		padding-top: 10px;
+	}
+	.section span {
+		font-size: 16px;
+	}
+	
+	.section-heading {
+		margin-top: -10px;
+		position: absolute;
+		left: 0px;
+		color:white;
+	}
+</style>
 <div class="row">
+	<div class="col-sm-12 section-heading">
+		{{content.heading}}
+	</div>
+</div>
+<div class="section row" ng-repeat="section in content.sections">
 	<div class="col-sm-12">
-		About
+		<span ng-bind="section.heading | uppercase"></span>
+		<p ng-bind="section.content"></p>
 	</div>
 </div>
