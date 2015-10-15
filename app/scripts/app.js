@@ -34,14 +34,14 @@ angular
   ])
   .config(function ($httpProvider, authInterceptorServiceProvider, ENV, LightboxProvider, flowFactoryProvider, slickCarouselConfig) {
     //Inietto l'interceptor per inviare il token a ogni richiesta
-    authInterceptorServiceProvider.config.urlFilter = [
+    /*authInterceptorServiceProvider.config.urlFilter = [
       ENV.apiEndpoint
     ];
     authInterceptorServiceProvider.config.useHeaders = true;
 
     $httpProvider.interceptors.push('authInterceptorService');
 
-    LightboxProvider.templateUrl = '../../views/modals/lightboxModal.html';
+    LightboxProvider.templateUrl = '../../views/modals/lightboxModal.html';*/
 
     flowFactoryProvider.defaults = {
       permanentErrors: [404, 500, 501],
@@ -62,26 +62,25 @@ angular
   })
   .run(function ($locale, datepickerPopupConfig, datepickerConfig, locationParametersConfig, resourceService) {
 
-    moment.locale('it');
+    /*moment.locale('it');
 
     datepickerConfig.startingDay = 1;
     datepickerPopupConfig.datepickerPopup = $locale.DATETIME_FORMATS.shortDate;
     datepickerPopupConfig.currentText = 'Oggi';
     datepickerPopupConfig.clearText = 'Pulisci';
     datepickerPopupConfig.closeText = 'Fatto';
+	*/
 
     // Configurazione LocationParametersService
-    locationParametersConfig.context.PropertyIdName = 'id';
-    /**
-     * @return {null}
-     */
+    /*locationParametersConfig.context.PropertyIdName = 'id';
+    
     locationParametersConfig.context.GetByIdFunction = function (value) {
       if (value) {
         return resourceService.forResource(value.entityName).get(value.entityId, value.propertiesToExpand);
       }
       return null;
     };
-    locationParametersConfig.event.RouteChangedEventName = '$locationChangeSuccess';
+    locationParametersConfig.event.RouteChangedEventName = '$locationChangeSuccess';*/
 
     /*
      locationParametersConfig.notification.OnErrorFunction = function (err, message) {
