@@ -51,16 +51,17 @@
 		</div>
 	</div>
 </div>
+<div class="shape"></div>
 <div class="container-fluid">
 	<toaster-container toaster-options="{'close-button':true,'time-out': { 'toast-success': 3000, 'toast-warning': 5000, 'toast-error': 10000 } }"></toaster-container>
-	<div ui-view></div>
+	<div class="main-container" ui-view></div>
 </div>
 
-<footer class="footer">
+<!--<footer class="footer">
 	<div class="container-fluid text-center">
 		<p><span class="glyphicon glyphicon-heart"></span> from the <a href="http://www.better.network" target="_blank" title="BETTER.NETWORK">BETTER.NETWORK</a> team</p>
 	</div>
-</footer>
+</footer>-->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
@@ -121,6 +122,7 @@
 <!-- ROUTES SECTION -->
 <script src="scripts/routes/routes.js"></script>
 <script src="scripts/routes/about.routes.js"></script>
+<script src="scripts/routes/services.routes.js"></script>
 <!-- Custom routes here -->
 
 
@@ -184,6 +186,10 @@
 <!-- About controller -->
 <script src="scripts/controllers/about/about.module.js"></script>
 <script src="scripts/controllers/about/about.js"></script>
+
+<!-- Services controller -->
+<script src="scripts/controllers/services/services.module.js"></script>
+<script src="scripts/controllers/services/services.js"></script>
 
 <!-- Custom controllers here -->
 <!-- Order should be: 1) [your_controller].module.js 2) [your_controller].js -->
