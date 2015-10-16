@@ -29,7 +29,8 @@ angular
     'millenium.constants',
     'millenium.templates',
     'millenium.filters',
-    'ui-rangeSlider'
+    'ui-rangeSlider',
+	'ngSanitize'
 
   ])
   .config(function ($httpProvider, authInterceptorServiceProvider, ENV, LightboxProvider, flowFactoryProvider, slickCarouselConfig) {
