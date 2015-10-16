@@ -1,9 +1,6 @@
 <ul class="nav navbar-nav">
 	<!--<li ui-sref-active="active"><a ui-sref="millenium.home">Home</a></li>-->
-	<li><a ui-sref="millenium.page({pageSlug: 'about'})">About</a></li>
-	<li><a ui-sref="millenium.page({pageSlug: 'services'})">Services</a></li>
-	<li><a ui-sref="millenium.page({pageSlug: 'projects'})">Projects</a></li>
-	<li><a ui-sref="millenium.page({pageSlug: 'contacts'})">Contacts</a></li>
+	<li ng-repeat="menuItem in menuItems"><a ui-sref="millenium.page({pageSlug: menuItem.slug})">{{menuItem.label}}</a></li>
 	<!--<li class="dropdown">
 		<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown sample <span class="caret"></span></a>
 		<ul class="dropdown-menu" role="menu">
