@@ -181,3 +181,7 @@ div h2 {
 .nav > li > a {
 	padding: 15px 40px;
 }
+
+.section p, .section span {
+	white-space: pre-wrap;
+}
