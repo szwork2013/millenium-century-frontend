@@ -217,6 +217,22 @@ body {
 	border-color: transparent;
 }
 
+.shape {
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 25%;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.shape:before, .shape:after {
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+}
+
 .page-heading {
 	margin-top: -10px;
 	position: absolute;
