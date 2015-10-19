@@ -172,6 +172,11 @@ div h2 {
 	src: url("../fonts/Porter-Bold.ttf");
 }
 
+@font-face {
+	font-family: Garamond;
+	src: url("../fonts/EBGaramond12-Italic.ttf");
+}
+
 body {
 	font-family: Helvetica;
 	color: #393738;
