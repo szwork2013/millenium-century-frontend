@@ -1,12 +1,14 @@
 <style ng-bind="content.style"></style>
 <div class="row">
-	<div class="col-sm-12 section-heading">
+	<div class="col-sm-12 page-heading">
 		{{content.heading}}
 	</div>
 </div>
-<div class="section row" ng-repeat="section in content.sections">
-	<div class="col-sm-12">
-		<span ng-bind="section.heading | uppercase"></span>
-		<p ng-bind-html="section.content"></p>
+<div class="sections">
+	<div class="section row" ng-repeat="section in content.sections">
+		<div class="col-sm-12">
+			<span class="section-heading" ng-bind="section.heading | uppercase"></span>
+			<p ng-bind-html="section.content"></p>
+		</div>
 	</div>
 </div>
