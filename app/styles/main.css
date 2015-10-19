@@ -7,7 +7,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 40px;
+  //margin-bottom: 40px;
 }
 
 /* Custom page footer */
@@ -157,6 +157,40 @@ div h2 {
   color: whitesmoke;
 }
 
+/* MILLENNIUM CENTURY CUSTOM CSS */
+
+@font-face {
+	font-family: heracles;
+	src: url("../fonts/heracles.ttf");
+}
+@font-face {
+	font-family: GoGoPosterPunch;
+	src: url("../fonts/GoGoPosterPunch.otf");
+}
+@font-face {
+	font-family: PorterBold;
+	src: url("../fonts/Porter-Bold.ttf");
+}
+
+body {
+	font-family: Helvetica;
+}
+
+.item .thumb {
+	width: 25%;
+	cursor: pointer;
+	float: left;
+}
+
+.item .thumb img {
+	width: 100%;
+	margin: 2px;
+}
+
+.item img {
+	width: 100%;
+}
+
 .navbar-default {
 	background-color: transparent;
 }
@@ -167,7 +201,6 @@ div h2 {
 
 .navbar-default .navbar-brand{
 	padding: 15px;
-	font-size: 32px;
 }
 
 .header, .navbar {
@@ -178,10 +211,55 @@ div h2 {
 	border-color: transparent;
 }
 
-.nav > li > a {
-	padding: 15px 40px;
-}
-
 .section p, .section span {
 	white-space: pre-wrap;
+}
+
+.president-branding {
+	font-family: heracles;
+	font-size: 48px!important;
+	line-height: 0.8;
+}
+
+@media only screen and (min-width : 320px) {
+	.navbar-default .navbar-brand {
+		font-size: 0.5em;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	.navbar-default .navbar-brand {
+		font-size: 1em;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.navbar-default .navbar-brand {
+		font-size: 1.5em;
+	}
+	.nav > li > a {
+		padding: 15px 30px;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.navbar-default .navbar-brand {
+		font-size: 2em;
+	}
+	.nav > li > a {
+		padding: 15px 45px;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.navbar-default .navbar-brand {
+		font-size: 2.5em;
+	}
+	.nav > li > a {
+		padding: 15px 45px;
+	}
 }
