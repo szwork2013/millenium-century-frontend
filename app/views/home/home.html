@@ -1,25 +1,114 @@
-<div class="row">
-	<div class="">
+<style media="screen">
+	.head-cap {
+		position: absolute;
+		left: 0px;
+		text-shadow: none;
+		color: black;
+		height: 70%;
+		z-index: 1;
+	}
+	.head-cap .cap-text {
+		position:absolute;
+		top: 20px;
+		margin-left: 54px;
+		padding-right: 10px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,255,0,0.3);
+	}
+	.cap-text h3 {
+		padding: 10px 60px 0 10px;
+		text-align: left;
+		font-size: 18px;
+		font-style: italic;
+		font-family: "Garamond Quarto";
+		margin-top: 0px;
+		line-height: 1.8em;
+	}
+	.head-cap::before {
+		position: absolute;
+		display: inline-block;
+		content: " ";
+		width: 32px;
+		height: 32px;
+		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADTUlEQVR4nO2bX2iPURjHP8N2ZVtNFmEJRTEljeZOLPKvkFsrbkSh3YgbspJdKEXNDS2p1Wqj5A43Vmoo/+MCzWhss60wsT+vi7OVdN7Xec55XtvF+da5XJ/v+3nbec/v+b0/yCeVwBGgCXgIfAR+AC058dIyDagCjgHNwGOge7zLGW3YIqAeeA8kGWuONtiSlcAFoCejxxct2BLgKjCSAftzVWiBLakCbjn2GAyFFQEngZ+OwDwFlAKNwJigR5CAhcADASxPAauBtx49vAWsA/o8gHkI2IPZ0Hx6eAlYD3zzBGoLqMV931ERUDn+RyEXryVgB2EXLxYwH+gKBGoJWAN8V+jhLGA60K4A1BBQDLxT6uEs4LgScGLN9rp0kyuKPXpdgMuQP+ezjJ/zvnTYrNQjAT5jjur/jOupyraGgVZgNzDX/7oBmAG8DOgyhPlcsgmY5QqtCQC2A6t8r9aSQwFd2vDcd3w3vibMMVkrRcAHjx5jwCmgwAda7QFMgGu+wIzUenY5EQJt9QDeR/fOT+SZR5cWAm5EOfBLCBzCPDG0s1bYI8EMPMpCoHUe0NMhwIxc8uiyNxT6SAjsA0pCoZYUAv3CLk8xYzDvVAiBCWYMlkc2enQJvvuHhcBhwg85abko7PIJhU34uhB6OxSYkRfCLo0a0Kwpqm0d0IBaUoZsvpcAG0KhS4XAUfIbcW8XdunFfF4Iyj4htD0UmJGzwi5NGtDLQmiDBjQl94Rd9mtAnwihOzWglhQgH3ktnwxoXv//C4Q9Bgk8/ID8ANQVCsyI9AB0VwMqHX7c0YCm5KCwi8rzf1KgKTkv7FKnAW0QQo9qQFPSJuyyTQMqHTfv0oCmRDqKW6EBvSmEVmtAU/Ja2KVcA9ohhC7WgKZkQNBjGKUZ5CsBNMG8kJBXJD16tKCdQnChFtgSSY9OLahEwIgW1JISQY8EeK4F7hZAv2JeS3FdkgltqaBHgtkwJV1mpoE1XnxIWwO4j82kAqTrDSljszwFJMCWKSIgIeV7wrwFbI0CooAoIAqIAqKAKCAKiAKigCggCogCooAoIAqIAqKAKGBKCQj5IaTLqnEUUPwfBMyzgeuRvyHuujrImMdb0kz4bwJtaxS4wV/fJf4GF/WotJCy8+UAAAAASUVORK5CYII=');
+		background-size: cover;
+		top: 25px;
+		left: 25px;
+	}
+	.head-cap::after {
+		position: absolute;
+		content: '';
+		width: 140px;
+		top: 20px;
+		height: 100%;
+		right: -209px;
+		background: linear-gradient(to left top, transparent 50%, rgba(0,255,0,0.3) 50%);
+	}
+	.foot {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		padding: 0px;
+		height: 45%;
+		background: black;
+		z-index: 2;
+	}
+	.foot::before {
+		position: absolute;
+		content: '';
+		width: 100%;
+		top: -80px;
+		height: 80px;
+		left: 0px;
+		background: linear-gradient(to right bottom, transparent 50%, #000000 50%);
+	}
+	.foot p {
+		color: white;
+		padding: 40px 20px 0px 20px;
+	}
+	.foot span {
+		color: white;
+		line-height: 0.8em;
+		padding: 20px;
+	}
+	.carousel-container {
+		padding: 0px;
+	}
+</style>
+<div class="row" style="position: relative;">
+	<div class="head-cap col-sm-3 col-xs-8">
+		<div class="cap-text">
+			<h3>In construction, proper direction paves the road to success, as the road to success is always under construction"</h3>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<div class="foot col-sm-3">
+		<p>
+			We are looking forward to the opportunity to bid upcoming projects, please remember Millennium Century on your next project.
+		</p>
+		<span class="president-branding">Sincerely,</span><br>
+		<span class="president-branding">Tony Veizi</span><br>
+		<span class="president-branding">President</span>
+	</div>
+	<div class="carousel-container col-sm-offset-3 col-sm-9 col-xs-12">
 		<div id="carousel" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
+			<!--<ol class="carousel-indicators">
 				<li data-target="#carousel" data-slide-to="0" class="active"></li>
-			</ol>
+			</ol>-->
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
-					<img src="../../images/carousel.jpg" alt="...">
-					<div class="carousel-caption">
-						<h3>"In construction, proper direction paves the road to success, as the road to success is always under construction"</h3>
-					</div>
+					<img src="../../images/mc-p5.png" alt="...">
 				</div>
 			</div>
-			<a class="left carousel-control" href="#carousel" ng-non-bindable role="button" data-slide="prev">
+			<!--<a class="left carousel-control" href="#carousel" ng-non-bindable role="button" data-slide="prev">
 				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
 			<a class="right carousel-control" href="#carousel" ng-non-bindable role="button" data-slide="next">
 				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
-			</a>
+			</a>-->
 		</div>
 	</div>
 </div>
