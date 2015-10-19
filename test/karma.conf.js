@@ -53,6 +53,7 @@ module.exports = function(config) {
       'bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
       'bower_components/bootstrap-css/js/bootstrap.min.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
+      'bower_components/ngmap/build/scripts/ng-map.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/services/services.js",

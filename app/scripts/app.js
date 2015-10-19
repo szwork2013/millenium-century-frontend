@@ -30,7 +30,8 @@ angular
     'millenium.templates',
     'millenium.filters',
     'ui-rangeSlider',
-	'ngSanitize'
+	'ngSanitize',
+	'ngMap'
 
   ])
   .config(function ($httpProvider, authInterceptorServiceProvider, ENV, LightboxProvider, flowFactoryProvider, slickCarouselConfig) {
@@ -74,7 +75,7 @@ angular
 
     // Configurazione LocationParametersService
     /*locationParametersConfig.context.PropertyIdName = 'id';
-    
+
     locationParametersConfig.context.GetByIdFunction = function (value) {
       if (value) {
         return resourceService.forResource(value.entityName).get(value.entityId, value.propertiesToExpand);
